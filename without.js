@@ -1,8 +1,11 @@
 const without = function(source, itemsToRemove){
-  let toFilt = parseInt(itemsToRemove)
-  const filtered = source.filter(source => source !== toFilt)
-  return filtered
+return source.filter(source => !itemsToRemove.includes(source))
 }
+
+console.log(without([1, 2, 3], [1])) // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+
+
 
 const assertArraysEqual = function(a, b) {
   if (JSON.stringify(a) === JSON.stringify(b)) {
@@ -10,9 +13,7 @@ const assertArraysEqual = function(a, b) {
   } else {
     console.log(`🛑🛑🛑 Array Assertion failed: [${a}] !== [${b}]`);
   }
-};
-
-console.log(without([1, 2, 3], [1]) )
+}
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case

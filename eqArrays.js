@@ -7,13 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const eqArrays = function(x, y){
-  if (JSON.stringify(x) === JSON.stringify(y)){
-    return true
+const eqArrays = function(x, y) {
+  if (JSON.stringify(x) === JSON.stringify(y)) {
+    return true;
   } else {
-    return false
+    return false;
   }
-  
-}
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);

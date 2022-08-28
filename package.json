@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@fuzzykittyz/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A small working version of lotide made for educational purposes",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/FuzzyKittyz/lotide.git"
   },
-  "author": "",
+  "author": "Chris Abel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FuzzyKittyz/lotide/issues"

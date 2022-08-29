@@ -1,13 +1,13 @@
 const letterPositions = function(sentence) {
-  const results = {};
-
-  for (let i = 0; i < sentence.length; i++) {
-    if (!results[sentence[i]]) {
-      results[sentence[i]] = [];
+  const results = {}; // sets results = to a new object
+  for (let i = 0; i < sentence.length; i++) { // uses a for let loop to loop through the sentence argument 
+    if (!results[sentence[i]]) { // checks to see if there is no sentence[i] within the results object
+      results[sentence[i]] = [];// if false it makes a new array within the object
     }
-    results[sentence[i]].push(i);
-  }
+    results[sentence[i]].push(i);// if there already is sentence[i] within the object it then pushes a new i into the array to show  
+  }                              // another position for sentence[i]
   return results;
 };
 
-console.log(letterPositions('Hello').l);
+
+module.exports = letterPositions;

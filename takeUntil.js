@@ -1,21 +1,13 @@
 const takeUntil = function(array, cb) {
-  let results = [];
-  for (let i = 0; i < array.length; i++) {
-    if (cb(array[i])) {
-      return results;
+  let results = []; //creates empty array = results var
+  for (let i = 0; i < array.length; i++) { //loops through the array
+    if (cb(array[i])) { //calls the cb function and sees if array[i] passes through the function as true
+      return results;// if it is true then return results
     } else {
-      results.push(array[i]);
+      results.push(array[i]); //if its not true then push array[i] into the results array
     }
   }
   return results;
 };
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-console.log(results1);
-
-console.log('---');
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
+module.exports = takeUntil;
